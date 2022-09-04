@@ -15,19 +15,8 @@ class _ChoseAppScreenState extends State<ChoseAppScreen> {
   final List<ChoseAppModel> _apps = [
     ChoseAppModel(
       screen: const App1MainScreen(),
-      title: 'Social media app 1',
-    ),
-    ChoseAppModel(
-      screen: const App1MainScreen(),
-      title: 'Chat app',
-    ),
-    ChoseAppModel(
-      screen: const App1MainScreen(),
-      title: 'Instagram redesign',
-    ),
-    ChoseAppModel(
-      screen: const App1MainScreen(),
-      title: 'Viber redesign',
+      title: 'Social media app UI',
+      image: 'assets/images/apps/app1.png',
     ),
   ];
 
@@ -46,12 +35,51 @@ class _ChoseAppScreenState extends State<ChoseAppScreen> {
               end: Alignment.topCenter,
             ),
           ),
-          child: ListView.builder(
-            itemCount: _apps.length,
-            itemBuilder: ((context, index) {
-              final app = _apps[index];
-              return AppCard(choseAppModel: app);
-            }),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'Made by',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'Benjamin Mahmić',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    Text(
+                      'https://github.com/BenjaminMahmic',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: _apps.length,
+                  itemBuilder: ((context, index) {
+                    final app = _apps[index];
+                    return AppCard(choseAppModel: app);
+                  }),
+                ),
+              ),
+            ],
           ),
         ),
       ),

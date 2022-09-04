@@ -19,63 +19,90 @@ class AppCard extends StatelessWidget {
               MaterialPageRoute(builder: (context) => choseAppModel.screen),
             );
           },
-          child: Container(
-            margin: const EdgeInsets.fromLTRB(8, 8, 10, 0),
-            padding: const EdgeInsets.symmetric(horizontal: 25),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: const AssetImage(
-                  'assets/images/global/home_card_bg.jpg',
-                ),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(.8),
-                  BlendMode.darken,
-                ),
-              ),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.white10,
-                  blurRadius: 10,
-                )
-              ],
-            ),
-            child: Column(
-              children: [
-                const SizedBox(height: 40),
-                Text(
-                  choseAppModel.title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                    fontSize: 24,
-                    height: 1.5,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              Container(
+                height: 180,
+                width: double.infinity,
+                margin: const EdgeInsets.fromLTRB(8, 8, 10, 0),
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(20),
+                    bottomRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(20),
+                    topLeft: Radius.circular(5),
                   ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 40),
-                Column(
-                  children: const [
-                    Text(
-                      'Tap to continue to this app preview',
-                      style: TextStyle(
-                        color: Colors.white30,
-                        fontSize: 12,
-                      ),
+                  image: DecorationImage(
+                    image: AssetImage(choseAppModel.image),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                      Colors.black.withOpacity(.7),
+                      BlendMode.darken,
                     ),
-                    SizedBox(height: 10),
-                    Icon(
-                      Icons.arrow_forward,
-                      color: Colors.white30,
-                      size: 14,
-                    ),
+                  ),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.white10,
+                      blurRadius: 10,
+                    )
                   ],
                 ),
-                const SizedBox(height: 15),
-              ],
-            ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: Text(
+                      choseAppModel.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                        fontSize: 20,
+                        height: 1.5,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+              ),
+              const Positioned(
+                top: 15,
+                left: 15,
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 3,
+                ),
+              ),
+              const Positioned(
+                bottom: 10,
+                child: Text(
+                  'Tap to preview app',
+                  style: TextStyle(
+                    color: Colors.white54,
+                    fontSize: 10,
+                  ),
+                ),
+              ),
+              const Positioned(
+                right: 28,
+                bottom: 12,
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.white,
+                  size: 8,
+                ),
+              ),
+              const Positioned(
+                right: 20,
+                bottom: 10,
+                child: Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.white,
+                  size: 12,
+                ),
+              ),
+            ],
           ),
         ),
       ],
