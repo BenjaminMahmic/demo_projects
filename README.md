@@ -1,16 +1,5 @@
-# demo_projects
+APP 1 - Social media app UI
+---------------------------
 
-A new Flutter project.
+![app1](https://user-images.githubusercontent.com/89051381/188309593-0c3e4b7e-0b0f-4f42-ab3b-803c7586b0a4.png)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
