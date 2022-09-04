@@ -16,6 +16,13 @@ List<UserModel> users = [
       'https://media.istockphoto.com/photos/young-adult-afro-american-woman-in-bathrobe-making-self-portrait-picture-id1269676921?k=20&m=1269676921&s=612x612&w=0&h=Ja7jlN_wX1xpXjzKN6gygAaODT_irMC-IIt9dutvZpQ=',
       'https://media.istockphoto.com/photos/smiling-young-fitness-woman-make-a-selfie-picture-id647373890?k=20&m=647373890&s=612x612&w=0&h=bLEjssxnexKwKOP1am5JzMNb4ZmN_JRMxekiC0rJDA8=',
     ],
+    recentActivity: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis ante sit amet lectus scelerisque.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In risus velit, fermentum sed nulla vel, sagittis lacinia arcu. Proin sed varius leo. Phasellus auctor fermentum purus, sed rutrum velit rhoncus.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit.',
+    ],
   ),
   UserModel(
     socialMediaName: '@alexyyy',
@@ -32,6 +39,13 @@ List<UserModel> users = [
       'https://media.istockphoto.com/photos/selfie-with-my-dog-picture-id1202410146?k=20&m=1202410146&s=612x612&w=0&h=77jWILw3IrzG3hFA7ZVIK25Xbp4GD8Rbp5hy17XNJXg=',
       'https://media.istockphoto.com/photos/happy-african-girl-blogger-holding-smartphone-shooting-vlog-or-video-picture-id1270274332?k=20&m=1270274332&s=612x612&w=0&h=lOWlJ9dHQwpU0Ncf2PIHsh8tmguH4mlDLtWKWA16R-0=',
       'https://media.istockphoto.com/photos/hiker-female-under-the-rain-take-a-selfie-picture-id1318164240?k=20&m=1318164240&s=612x612&w=0&h=0ydSuEyjJctEMgAAKu7PQnkd4yFRNGCFRgAmhGrdo5s=',
+    ],
+    recentActivity: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam quis ante sit amet lectus scelerisque.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In risus velit, fermentum sed nulla vel, sagittis lacinia arcu. Proin sed varius leo. Phasellus auctor fermentum purus, sed rutrum velit rhoncus.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit.',
     ],
   ),
 ];

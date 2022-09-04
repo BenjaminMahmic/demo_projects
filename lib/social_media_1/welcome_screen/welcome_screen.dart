@@ -2,8 +2,10 @@ import 'package:demo_projects/social_media_1/home_screen/home_screen.dart';
 import 'package:demo_projects/social_media_1/welcome_screen/components/random_user_card.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class App1MainScreen extends StatelessWidget {
+  static const String routeName = '/App1MainScreen';
+
+  const App1MainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

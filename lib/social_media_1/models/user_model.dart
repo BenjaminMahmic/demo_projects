@@ -8,6 +8,7 @@ class UserModel {
   final int followers;
   final bool onlineStatus;
   final List<String> images;
+  final List<String> recentActivity;
 
   UserModel({
     required this.socialMediaName,
@@ -19,5 +20,6 @@ class UserModel {
     required this.followers,
     this.onlineStatus = true,
     required this.images,
+    required this.recentActivity,
   });
 }

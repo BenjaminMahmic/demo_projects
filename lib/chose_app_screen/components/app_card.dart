@@ -20,7 +20,8 @@ class AppCard extends StatelessWidget {
             );
           },
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            margin: const EdgeInsets.fromLTRB(8, 8, 10, 0),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             alignment: Alignment.center,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -30,7 +31,7 @@ class AppCard extends StatelessWidget {
                 ),
                 fit: BoxFit.cover,
                 colorFilter: ColorFilter.mode(
-                  Colors.black.withOpacity(.6),
+                  Colors.black.withOpacity(.8),
                   BlendMode.darken,
                 ),
               ),
@@ -41,45 +42,40 @@ class AppCard extends StatelessWidget {
                 )
               ],
             ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                bottom: 50,
-              ),
-              child: RotatedBox(
-                quarterTurns: -1,
-                child: Text(
+            child: Column(
+              children: [
+                const SizedBox(height: 40),
+                Text(
                   choseAppModel.title,
                   style: const TextStyle(
                     fontWeight: FontWeight.w900,
-                    color: Colors.white70,
-                    fontSize: 45,
+                    color: Colors.white,
+                    fontSize: 24,
                     height: 1.5,
                   ),
                   textAlign: TextAlign.center,
                 ),
-              ),
-            ),
-          ),
-        ),
-        Positioned(
-          left: 0,
-          right: 0,
-          bottom: 20,
-          child: Column(
-            children: const [
-              Icon(
-                Icons.arrow_forward,
-                color: Colors.white,
-              ),
-              SizedBox(height: 15),
-              Text(
-                'Tap to continue to this app preview',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 12,
+                const SizedBox(height: 40),
+                Column(
+                  children: const [
+                    Text(
+                      'Tap to continue to this app preview',
+                      style: TextStyle(
+                        color: Colors.white30,
+                        fontSize: 12,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white30,
+                      size: 14,
+                    ),
+                  ],
                 ),
-              ),
-            ],
+                const SizedBox(height: 15),
+              ],
+            ),
           ),
         ),
       ],

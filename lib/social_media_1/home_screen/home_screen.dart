@@ -95,7 +95,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const ProfileDetailScreen(),
+                        builder: (context) => ProfileDetailScreen(
+                          user: currentUser,
+                        ),
                       ),
                     );
 
@@ -282,28 +284,27 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 50),
+                  const SizedBox(height: 20),
                   Align(
                     alignment: Alignment.center,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: const [
-                        Icon(
-                          Icons.arrow_circle_up,
-                          color: Colors.grey,
-                          size: 16,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white38,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Text(
+                        'Swipe up to see the profile in detail',
+                        style: TextStyle(
+                          fontSize: 12,
                         ),
-                        Text(
-                          'Swipe up to see the profile in detail',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 5),
                 ],
               ),
             ),
